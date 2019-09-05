@@ -23,6 +23,7 @@ for (let i = 0; i < 2; i++) {
         console.log("done");
         appdata.expenses[a] = b;
     } else {
+        console.log ("bad result");
         i--;//дз готово
     }
 }
@@ -36,7 +37,8 @@ while (i < 2) {
         console.log("done");
         appdata.expenses[a] = b;
     } else {
-        i=0;//дз готово
+        console.log ("bad result");
+        i--;//дз готово
     }
 }
 */
@@ -50,7 +52,8 @@ do {
         console.log("done");
         appdata.expenses[a] = b;
     } else {
-        i=0;//дз готово
+        console.log ("bad result");
+        i--;//дз готово
     } 
 } while (i < 2);*/
 appdata.moneyPerDay = appdata.budget / 30
