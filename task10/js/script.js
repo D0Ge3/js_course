@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', function() {
     })
     //timer
 
-    let deadline = '2019-10-13';
+    let deadline = '2018-10-13';
 
     function getTimeRemaining(endTime) {
         let t = Date.parse(endTime) - Date.parse(new Date()),
@@ -50,18 +50,11 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     function setClock(id, endTime) {
-        
-        let t1 = getTimeRemaining(endTime),
-            timer = document.getElementById(id),
+        let  timer = document.getElementById(id),
             hours = timer.querySelector('.hours'),
             minutes = timer.querySelector('.minutes'),
             seconds = timer.querySelector('.seconds');
-            if (t1.total <= 0) {
-                hours.textContent = "00";
-                minutes.textContent = "00";
-                seconds.textContent = "00";
-                return;
-            }
+            
         let timeInterval = setInterval(updateClock, 1000);
 
         function updateClock() {
@@ -72,6 +65,9 @@ window.addEventListener('DOMContentLoaded', function() {
 
             if (t.total <= 0) {
                 clearInterval(timeInterval);
+                hours.textContent = "00";
+                minutes.textContent = "00";
+                seconds.textContent = "00";
             }
         function IFtimeOneDigitAddZero(typeTime,time) {
             if (time < 10) {
