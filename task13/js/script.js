@@ -190,4 +190,5 @@ window.addEventListener('DOMContentLoaded', function() {
         clearInputs(inputAdditForm);
 
     });
+
 } )
